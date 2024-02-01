@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Signup</title>
+    <link rel="stylesheet" href="css/loginstyle.css">
+</head>
+
+<body>
+    <nav>
+        <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+        </div>
+        <div class="logo">
+            <a href="main.html">Course Differenitator</a>
+        </div>
+        <div class="nav-items">
+            <li><a href="main.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </div>
+
+    </nav>
+    <section class="forms-section">
+        <h1 class="section-title">Course Differenitator</h1>
+        <div class="forms">
+            <div class="form-wrapper is-active">
+                <button type="button" class="switcher switcher-login">
+          Login
+          <span class="underline"></span>
+        </button>
+                <form class="form form-login" action="login.php" method="POST">
+                    <fieldset>
+                        <legend>Please, enter your email and password for login.</legend>
+                        <div class="social-container">
+                            <a href="#" class="social" target="_self"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social" target="_self"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <span>or use your account</span>
+                        <div class="input-block">
+                            <label for="login-email">E-mail</label>
+                            <input id="login-email" name="E-mail" pe="email" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="login-password">Password</label>
+                            <input id="login-password" name="Pass-word" type="password" required>
+                        </div>
+                    </fieldset>
+                    <input type="submit" name="log-in" class="button" role="button" />
+                </form>
+            </div>
+            <div class="form-wrapper">
+                <button type="button" class="switcher switcher-signup">
+          Sign Up
+          <span class="underline"></span>
+        </button>
+                <form class="form form-signup" action="connect.php" method="post">
+                    <fieldset>
+                        <legend>Please, enter your email, password and password confirmation for sign up.</legend>
+                        <div class="social-container">
+                            <a href="#" class="social" target="_self"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social" target="_self"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <span>or use your account</span>
+                        <div class="input-block">
+                            <label for="signup-email">Name</label>
+                            <input id="signup-email" type="text" name="name" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="signup-password">Username</label>
+                            <input id="signup-password" type="text" name="username" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="signup-password-confirm">Email</label>
+                            <input id="signup-password-confirm" name="email" type="email" required>
+                        </div>
+                        <div class="input-block">
+                            <label>Password</label>
+                            <input name="password" type="password" required>
+                        </div>
+                    </fieldset>
+                    <button type="submit" name="sign_up" class="btn-signup">Continue</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer ">
+        <div class="container ">
+            <div class="row ">
+                <div class="footer-col ">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#about-section">about us</a></li>
+                        <li><a href="# ">our services</a></li>
+                        <li><a href="# ">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col ">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#FAQ ">FAQ</a></li>
+                        <li>
+                            <a href="# ">Wishlist</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col " id="follow ">
+                    <h4>follow us</h4>
+                    <div class="social-links ">
+                        <a href="# "><i class="fab fa-facebook-f "></i></a>
+                        <a href="# "><i class="fab fa-twitter "></i></a>
+                        <a href="# "><i class="fab fa-instagram "></i></a>
+                        <a href="# "><i class="fab fa-linkedin-in "></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script>
+    const switchers = [...document.querySelectorAll('.switcher')]
+
+    switchers.forEach(item => {
+        item.addEventListener('click', function() {
+            switchers.forEach(item => item.parentElement.classList.remove('is-active'))
+            this.parentElement.classList.add('is-active')
+        })
+    })
+</script>
+
+</html>

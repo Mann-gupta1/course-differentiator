@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Product Card/Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/description.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+</head>
+
+<body>
+    <!-- =======================header============================== -->
+
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <a href="../main.html">Course Differenitator</a>
+            </div>
+            <ul class="menu">
+                <li><a href="../main.html">Home</a></li>
+                <li><a href="../aboutus.html">About</a></li>
+                <li><a href="../contactus.html">Contact</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--  ==================================== main =================================== -->
+    <div class="main-wrapper">
+        <div class="container1">
+            <div class="product-div">
+                <div class="product-div-left">
+                    <img src="../poster/coding_ninja_dsa.jpg" alt="">
+                </div>
+                <div class="product-div-right">
+                    <span class="product-name">Data Structure</span>
+                    <span class="product-price">Rs. 52000</span>
+                    <div class="product-rating">
+                        <span>4.8</span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star-half-alt"></i></span>
+                        <span>(17K+ students)</span>
+                    </div>
+
+                    <p class="product-description">This is the course to pick if you are just getting into coding and want to build a strong foundation. Widely used in competitive programming.</p>
+                    <div class="btn-groups">
+                        <button type="button" class="add-cart-btn"><i class = "fas fa-shopping-cart"></i><a href="../compare.html">Compare</a></button>
+                        <button type="button" class="buy-now-btn"><i class = "fas fa-wallet"></i><a href="https://www.codingninjas.com/courses/c-plus-plus-data-structures-and-algorithms">buy now</a></button>
+                        <button type="button" class="add-curri-btn"><i class = "fas fa-book-dead"></i><a href="../curriculum/dsa-in-c-16584.pdf" target="_blank">Curriculum</a></button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- =======================footer============================== -->
+    <footer class="footer ">
+        <div class="container ">
+            <div class="row ">
+                <div class="footer-col ">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="../aboutus.html">about us</a></li>
+                        <li><a href="# ">our services</a></li>
+                        <li><a href="# ">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col ">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="../FAQ.html ">FAQ</a></li>
+                        <li>
+                            <a href="# ">Wishlist</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col " id="follow ">
+                    <h4>follow us</h4>
+                    <div class="social-links ">
+                        <a href="# "><i class="fab fa-facebook-f "></i></a>
+                        <a href="# "><i class="fab fa-twitter "></i></a>
+                        <a href="# "><i class="fab fa-instagram "></i></a>
+                        <a href="# "><i class="fab fa-linkedin-in "></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const allHoverImages = document.querySelectorAll('.hover-container div img');
+        const imgContainer = document.querySelector('.img-container');
+
+        window.addEventListener('DOMContentLoaded', () => {
+            allHoverImages[0].parentElement.classList.add('active');
+        });
+
+        allHoverImages.forEach((image) => {
+            image.addEventListener('mouseover', () => {
+                imgContainer.querySelector('img').src = image.src;
+                resetActiveImg();
+                image.parentElement.classList.add('active');
+            });
+        });
+
+        function resetActiveImg() {
+            allHoverImages.forEach((img) => {
+                img.parentElement.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+
+</html>
